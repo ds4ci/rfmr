@@ -1,0 +1,11 @@
+Package: rfmr
+Type: Package
+Title: Recency, Frequency, and Monitary tools in R
+Version: 0.1.0
+Author: Jim Porzak ()
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
