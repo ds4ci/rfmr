@@ -1,11 +1,26 @@
 Package: rfmr
 Type: Package
-Title: Recency, Frequency, and Monitary tools in R
+Title: Recency, Frequency, and Monetary tools in R
 Version: 0.1.0
-Author: Jim Porzak ()
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: person("Jim", "Porzak", email = "jim@ds4ci.org",
+                  role = c("aut", "cre"))
+Description: RFM (Recency, Frequency, & Monetary Value) is the classic direct
+    marketing optimization method dating back to the 1990's. While the 
+    original calculation methods were klugy, to say the least, the underlying
+    marketing concepts are still sound today. In fact, recency and frequency
+    are often top predictors in propensity to purchase or churn models.
+    In addition to utility functions for calculating and visualization of RFM,
+    we extend classic RFM with RFM based customer segmentation (including
+    segment transition over time) and the handling of additional variables
+    that measure customer engagement like "Breadth."
+Depends: R (>= 3.3)
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+Imports: dplyr,
+    lazyeval,
+    ggplot2
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

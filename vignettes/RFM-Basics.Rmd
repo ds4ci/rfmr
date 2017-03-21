@@ -1,0 +1,57 @@
+---
+title: "RFM Basics"
+author: "Jim Porzak"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{RFM Basics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+RFM is...
+
+```{r }
+library(rfmr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+
+## Exmple Data Set
+
+`event_orders` is ...
+```{r}
+data(event_orders)
+head(event_orders)
+
+```
+
+
+## Converting raw order lines to RFM
+```{r}
+RFM <- rfm(event_orders, "uid", "order_on", "value")
+head(RFM)
+```
+
+## Basic RFM Histogram
+
+```{r fig.width=9, fig.height= 5}
+
+nbins <- 50
+RFM_tidy <- RFM %>% 
+  select(uid, Recency, Frequency, Monetary) %>% 
+  gather(RFM, Value, -uid) %>% 
+  arrange(uid)
+
+ggplot(RFM_tidy, aes(Value)) +
+  geom_histogram(bins = nbins) + 
+  scale_x_log10() +
+  # geom_freqpoly() +
+  ggtitle("RFM Histograms for Event Orders data.", subtitle = "Note Log10 scale on X-axes") +
+  facet_grid(. ~ RFM, scales = "free")
+
+```
+
+
