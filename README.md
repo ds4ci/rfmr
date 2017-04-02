@@ -21,6 +21,7 @@ Specifically, the detailed goals for **rfmr** are to have:
 * Functions to segment customers based on their RFM metrics
 * Functions to visualize these customer segments
 * Functions to track customers migrating between segments over time and fire off alarms to trigger marketing actions
+* Augment basic RFM with additional engagement metrics such as breadth
 * Vignettes covering 
   * Basic RFM methods
   * Using a remote SQL database for the customer data (as opposed to local in-memory tables)

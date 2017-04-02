@@ -4,7 +4,7 @@
 \name{event_orders}
 \alias{event_orders}
 \title{Orders from an event venue.}
-\format{A tbl_df with 20698 rows an 10 variables:
+\format{A tbl_df with 20,698 rows and 10 variables:
 \describe{
   \item{uid}{unique identifier for customer (integer)}
   \item{order_on}{order date (Date)}
@@ -12,7 +12,7 @@
   \item{value}{total dollar value for order (numeric)}
 }}
 \source{
-sanitized data from a DS4CI customer
+sanitized data from a prior client
 }
 \usage{
 event_orders
