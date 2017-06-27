@@ -55,3 +55,13 @@ ggplot(RFM_tidy, aes(Value)) +
 ```
 
 
+```{r}
+RFM_tidy %>% 
+  filter(RFM == "Monetary", Value <= 18) %>% 
+  group_by(Value) %>% 
+  summarize(N = n()) %>% 
+  ggplot(aes(Value)) +
+  xlim(1, 10) +
+  geom_histogram()
+```
+

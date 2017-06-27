@@ -37,7 +37,7 @@ rfm <- function(orders_df, cust_id, order_date, order_value, as_of_date = NA){
                          setNames(list(lazyeval::interp(~ sum(a), a = as.name(order_value))), "Monetary")
     )) %>%
 
-     mutate(Recency = as.integer(as_of_date) - as.integer(last_on),
-            tenure =  as.integer(as_of_date) - as.integer(first_on)) %>%
+    mutate(Recency = as.integer(as_of_date - last_on),
+          tenure =  as.integer(as_of_date - first_on)) %>%
     ungroup()
 }
