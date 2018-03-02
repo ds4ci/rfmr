@@ -1,7 +1,7 @@
 Package: rfmr
 Type: Package
 Title: Recency, Frequency, and Monetary tools in R
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Jim", "Porzak", email = "jim@ds4ci.org",
                   role = c("aut", "cre"))
 Description: RFM (Recency, Frequency, & Monetary Value) is the classic direct
